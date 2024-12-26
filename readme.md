@@ -1,78 +1,78 @@
-# Vulnerable Auth Lab 🔬
+# Secure Auth Lab 🛡️
 
-> A deliberately vulnerable authentication service for security research and learning. Part of Lorenzo Porto Labs.
+> Enterprise-grade authentication service with security research components. 
 
-[![Lab Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)](https://github.com/yourusername/vulnerable-auth-lab)
-[![Lab Category](https://img.shields.io/badge/Category-API_Security-purple)](https://github.com/yourusername/vulnerable-auth-lab)
+[![Security Score](https://img.shields.io/badge/Security-A+-green)](https://github.com/yourusername/secure-auth-lab)
+[![Lab Category](https://img.shields.io/badge/Category-API_Security-purple)](https://github.com/yourusername/secure-auth-lab)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## About This Lab 🎯
 
-A deliberately vulnerable authentication service designed for API security research and training. Contains both secure implementations and common vulnerabilities for learning purposes.
+Production-ready authentication service with embedded security test cases. Demonstrates secure implementations while providing controlled environments for security research.
 
-## Security Research Areas 🔍
+## Security Features 🔐
 
-- JWT token vulnerabilities
-- OAuth 2.0 implementation flaws
-- MFA bypass techniques
-- Rate limiting evasion
-- Session management weaknesses
-- Privilege escalation paths
+- RSA-256 signed JWTs
+- Argon2id password hashing
+- Hardware-backed MFA
+- Adaptive rate limiting
+- Anomaly detection
+- Session binding
 
-## Lab Environment 🛠️
-
-- Go 1.21+ (Backend API)
-- PostgreSQL (User data, sessions)
-- Redis (Rate limiting, caching)
-- Kubernetes (Deployment)
-- Prometheus (Metrics)
-
-## Vulnerabilities 💉
-
-This lab contains various vulnerabilities, including:
+## Research Components 🔬
 
 ```go
-// Example vulnerable code snippet
-func validateToken(token string) bool {
-    // VULN: Weak token validation
-    return len(token) > 0
+// Configurable security controls for research
+type SecurityControls struct {
+    TokenSigningMethod jwt.SigningMethod
+    PasswordHashCost   int
+    MFARequired       bool
+    RateLimitBypass   bool  // Research only
 }
 ```
 
-Full vulnerability list in [VULNERABILITIES.md](docs/VULNERABILITIES.md)
+## Architecture 🏗️
 
-## Getting Started 🚀
+- Go 1.21+ (Core service)
+- PostgreSQL (User store)
+- Redis (Session management)
+- Kubernetes (Orchestration) 
+- Prometheus (Security metrics)
+
+## Security Modes 🛠️
 
 ```bash
-# Run vulnerable version
-make run-vuln
-
-# Run secure version
+# Production mode (All security controls)
 make run-secure
 
-# Deploy local lab
-make deploy-lab
+# Research mode (Configurable controls)
+make run-research
+
+# Local development
+make run-dev
 ```
 
-## Lab Modules 📚
+## Documentation 📚
 
-1. Authentication Bypass
-2. Token Security
-3. MFA Weaknesses
-4. Session Attacks
-5. Rate Limiting Bypass
+- [Security Design](docs/SECURITY.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Research Notes](docs/RESEARCH.md)
+- [Attack Scenarios](docs/ATTACKS.md)
 
-## Research Notes 📝
+## Lab Projects
 
-My findings, exploits, and security research:
-[RESEARCH.md](docs/RESEARCH.md)
+1. Token Security Research
+2. MFA Implementation Analysis
+3. Rate Limit Testing
+4. Session Management Study
+5. Anomaly Detection Research
 
-## Disclaimer ⚠️
+## Additional Resources 📖
 
-This is a deliberately vulnerable application. Do not use in production.
+- [Security Best Practices](docs/BEST_PRACTICES.md)
+- [Research Methodology](docs/METHODOLOGY.md)
+- [Test Cases](docs/TEST_CASES.md)
 
-## License
+## Safe Harbor 🔓
 
-MIT License - See [LICENSE](LICENSE)
-
-[@YourHandle](https://twitter.com/yourhandle) | [Blog](https://yourblog.com)
+Security research following responsible disclosure welcome.
