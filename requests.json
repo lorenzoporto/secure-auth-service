@@ -1,0 +1,81 @@
+{
+  "login": {
+    "request": {
+      "username": "user@example.com",
+      "password": "password123",
+      "mfa_code": "123456",
+      "device_fingerprint": "a1b2c3d4-device-fingerprint",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"
+    },
+    "response": {
+      "access_token": "eyJhbGciOiJSUzI1NiI...",
+      "refresh_token": "v2.local.xZhq9bUWND9...",
+      "expires_in": 900,
+      "token_type": "Bearer"
+    }
+  },
+  "refresh": {
+    "request": {
+      "refresh_token": "v2.local.xZhq9bUWND9...",
+      "security_context": {
+        "device_fingerprint": "a1b2c3d4-device-fingerprint",
+        "ip_address": "192.168.1.1",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0",
+        "geo_location": {
+          "latitude": 37.7749,
+          "longitude": -122.4194,
+          "accuracy": 100
+        }
+      }
+    },
+    "response": {
+      "access_token": "eyJhbGciOiJSUzI1NiI...",
+      "refresh_token": "v2.local.newRefreshToken...",
+      "expires_in": 900,
+      "token_type": "Bearer"
+    }
+  },
+  "logout": {
+    "request": {
+      "refresh_token": "v2.local.xZhq9bUWND9..."
+    },
+    "response": {
+      "status": "success",
+      "message": "Successfully logged out"
+    }
+  },
+  "error_responses": {
+    "invalid_credentials": {
+      "error": "invalid_credentials",
+      "error_description": "The provided credentials are invalid",
+      "status": 401
+    },
+    "invalid_mfa": {
+      "error": "invalid_mfa_code",
+      "error_description": "The provided MFA code is invalid or expired",
+      "status": 401
+    },
+    "token_expired": {
+      "error": "token_expired",
+      "error_description": "The provided token has expired",
+      "status": 401
+    },
+    "invalid_token": {
+      "error": "invalid_token",
+      "error_description": "The provided token is invalid",
+      "status": 401
+    },
+    "rate_limit": {
+      "error": "rate_limit_exceeded",
+      "error_description": "Too many requests, please try again later",
+      "status": 429,
+      "retry_after": 300
+    },
+    "security_alert": {
+      "error": "security_alert",
+      "error_description": "Suspicious activity detected",
+      "status": 403,
+      "security_code": "ANOMALY_DETECTED"
+    }
+  }
+}
