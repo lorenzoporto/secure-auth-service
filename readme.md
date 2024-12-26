@@ -52,27 +52,3 @@ make run-research
 make run-dev
 ```
 
-## Documentation 📚
-
-- [Security Design](docs/SECURITY.md)
-- [Architecture](docs/ARCHITECTURE.md)
-- [Research Notes](docs/RESEARCH.md)
-- [Attack Scenarios](docs/ATTACKS.md)
-
-## Lab Projects
-
-1. Token Security Research
-2. MFA Implementation Analysis
-3. Rate Limit Testing
-4. Session Management Study
-5. Anomaly Detection Research
-
-## Additional Resources 📖
-
-- [Security Best Practices](docs/BEST_PRACTICES.md)
-- [Research Methodology](docs/METHODOLOGY.md)
-- [Test Cases](docs/TEST_CASES.md)
-
-## Safe Harbor 🔓
-
-Security research following responsible disclosure welcome.
