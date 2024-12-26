@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-service-config
+data:
+  config.json: |
+    {
+      "tokens": {
+        "refresh": {
+          "length": 64,
+          "expiry": "168h",
+          "rotationGracePeriod": 3600,
+          "version": "v2",
+          "signingKey": "${REFRESH_TOKEN_KEY}"
+        },
+        "access": {
+          "expiry": "15m",
+          "algorithm": "RS256"
+        }
+      },
+      "security": {
+        "maxSessions": 5,
+        "anomalyThreshold": 0.7,
+        "rateLimit": {
+          "window": 300,
+          "max": 100
+        },
+        "argon2": {
+          "time": 3,
+          "memory": 65536,
+          "threads": 4,
+          "keyLen": 32
+        },
+        "mfa": {
+          "enabled": true,
+          "totpExpiry": "30s"
+        }
+      }
+    }
