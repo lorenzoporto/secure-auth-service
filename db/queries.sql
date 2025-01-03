@@ -2,7 +2,6 @@ const schema = `
 CREATE TABLE users (
     id UUID PRIMARY KEY,
     username VARCHAR(255) UNIQUE NOT NULL,
-    password_hash BYTEA NOT NULL,
     salt BYTEA NOT NULL,
     mfa_secret BYTEA,
     mfa_enabled BOOLEAN DEFAULT FALSE,
