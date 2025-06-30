@@ -4,7 +4,7 @@
 
 [![Security Score](https://img.shields.io/badge/Security-A+-green)](https://github.com/yourusername/secure-auth-lab)
 [![Lab Category](https://img.shields.io/badge/Category-API_Security-purple)](https://github.com/yourusername/secure-auth-lab)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 
 ## About This Lab  
 
